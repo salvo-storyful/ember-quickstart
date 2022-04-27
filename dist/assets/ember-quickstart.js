@@ -379,9 +379,38 @@
 
   _exports.default = Router;
   Router.map(function () {
-    this.route('scientists');
-    this.route('programmers');
+    this.route("scientists");
+    this.route("programmers");
+    this.route("not-found", {
+      path: "/*path"
+    });
   });
+});
+;define("ember-quickstart/routes/index", ["exports", "@ember/routing/route"], function (_exports, _route) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
+
+  class IndexRoute extends _route.default {}
+
+  _exports.default = IndexRoute;
+});
+;define("ember-quickstart/routes/not-found", ["exports", "@ember/routing/route"], function (_exports, _route) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
+
+  class NotFoundRoute extends _route.default {}
+
+  _exports.default = NotFoundRoute;
 });
 ;define("ember-quickstart/routes/programmers", ["exports", "@ember/routing/route"], function (_exports, _route) {
   "use strict";
@@ -521,6 +550,42 @@
 
   _exports.default = _default;
 });
+;define("ember-quickstart/templates/index", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
+
+  var _default = (0, _templateFactory.createTemplateFactory)({
+    "id": "/vMOCTxK",
+    "block": "[[[1,[28,[35,0],[\"Home page\"],null]],[1,\"\\n\"],[10,\"h2\"],[12],[1,\"Home page\"],[13],[1,\"\\n\"],[46,[28,[37,2],null,null],null,null,null],[1,\"\\n\"],[10,\"ul\"],[12],[1,\"\\n  \"],[10,\"li\"],[12],[8,[39,3],null,[[\"@route\"],[\"scientists\"]],[[\"default\"],[[[[1,\"\\n      Scientists\\n    \"]],[]]]]],[13],[1,\"\\n  \"],[10,\"li\"],[12],[8,[39,3],null,[[\"@route\"],[\"programmers\"]],[[\"default\"],[[[[1,\"\\n      Programmers\\n    \"]],[]]]]],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[\"page-title\",\"component\",\"-outlet\",\"link-to\"]]",
+    "moduleName": "ember-quickstart/templates/index.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/templates/not-found", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
+
+  var _default = (0, _templateFactory.createTemplateFactory)({
+    "id": "TZAk4MWD",
+    "block": "[[[1,[28,[35,0],[\"NotFound\"],null]],[1,\"\\n\"],[46,[28,[37,2],null,null],null,null,null]],[],false,[\"page-title\",\"component\",\"-outlet\"]]",
+    "moduleName": "ember-quickstart/templates/not-found.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
 ;define("ember-quickstart/templates/programmers", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
   "use strict";
 
@@ -531,8 +596,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "XrA/xTZ/",
-    "block": "[[[8,[39,0],null,[[\"@title\",\"@people\"],[\"List of Programmers\",[30,1]]],null],[1,\"\\n\"]],[\"@model\"],false,[\"people-list\"]]",
+    "id": "GQH96jJH",
+    "block": "[[[8,[39,0],null,[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n  Home\\n\"]],[]]]]],[1,\"\\n\"],[8,[39,1],null,[[\"@title\",\"@people\"],[\"List of Programmers\",[30,1]]],null],[1,\"\\n\"]],[\"@model\"],false,[\"link-to\",\"people-list\"]]",
     "moduleName": "ember-quickstart/templates/programmers.hbs",
     "isStrictMode": false
   });
@@ -549,8 +614,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "OVH/dk6H",
-    "block": "[[[8,[39,0],null,[[\"@title\",\"@people\"],[\"List of Scientists\",[30,1]]],null],[1,\"\\n\"]],[\"@model\"],false,[\"people-list\"]]",
+    "id": "GAWTX6ls",
+    "block": "[[[8,[39,0],null,[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n  Home\\n\"]],[]]]]],[1,\"\\n\"],[8,[39,1],null,[[\"@title\",\"@people\"],[\"List of Scientists\",[30,1]]],null],[1,\"\\n\"]],[\"@model\"],false,[\"link-to\",\"people-list\"]]",
     "moduleName": "ember-quickstart/templates/scientists.hbs",
     "isStrictMode": false
   });
@@ -636,7 +701,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.0.0+800ef190"});
+            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.0.0+cd750257"});
           }
         
 //# sourceMappingURL=ember-quickstart.map

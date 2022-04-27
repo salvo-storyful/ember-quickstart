@@ -1,5 +1,5 @@
-import EmberRouter from '@ember/routing/router';
-import config from 'ember-quickstart/config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "ember-quickstart/config/environment";
 
 export default class Router extends EmberRouter {
   location = config.locationType;
@@ -7,6 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('scientists');
-  this.route('programmers');
+  this.route("scientists");
+  this.route("programmers");
+  this.route("not-found", { path: "/*path" });
 });

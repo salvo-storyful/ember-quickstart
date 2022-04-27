@@ -380,7 +380,26 @@
   _exports.default = Router;
   Router.map(function () {
     this.route('scientists');
+    this.route('programmers');
   });
+});
+;define("ember-quickstart/routes/programmers", ["exports", "@ember/routing/route"], function (_exports, _route) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
+
+  class ProgrammersRoute extends _route.default {
+    model() {
+      return ["Tizio", "Caio", "Sempronio"];
+    }
+
+  }
+
+  _exports.default = ProgrammersRoute;
 });
 ;define("ember-quickstart/routes/scientists", ["exports", "@ember/routing/route"], function (_exports, _route) {
   "use strict";
@@ -497,6 +516,24 @@
     "id": "C7g7uH4I",
     "block": "[[[10,\"h1\"],[12],[1,\"PeopleTracker\"],[13],[1,\"\\n\\n\"],[46,[28,[37,1],null,null],null,null,null],[1,\"\\n\"]],[],false,[\"component\",\"-outlet\"]]",
     "moduleName": "ember-quickstart/templates/application.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/templates/programmers", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
+
+  var _default = (0, _templateFactory.createTemplateFactory)({
+    "id": "XrA/xTZ/",
+    "block": "[[[8,[39,0],null,[[\"@title\",\"@people\"],[\"List of Programmers\",[30,1]]],null],[1,\"\\n\"]],[\"@model\"],false,[\"people-list\"]]",
+    "moduleName": "ember-quickstart/templates/programmers.hbs",
     "isStrictMode": false
   });
 

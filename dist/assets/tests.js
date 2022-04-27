@@ -88,6 +88,19 @@ define("ember-quickstart/tests/test-helper", ["ember-quickstart/app", "ember-qui
   (0, _qunitDom.setup)(QUnit.assert);
   (0, _emberQunit.start)();
 });
+define("ember-quickstart/tests/unit/routes/programmers-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
+
+  (0, _qunit.module)('Unit | Route | programmers', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:programmers');
+      assert.ok(route);
+    });
+  });
+});
 define("ember-quickstart/tests/unit/routes/scientists-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
